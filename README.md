@@ -20,40 +20,6 @@ PathSense adds three layers of protection to a standard cane:
 2. **Process** — A microcontroller checks readings against safe-distance thresholds
 3. **Alert** — Vibration feedback (or SOS alarm) tells the user what to do
 
-## Prototype Code (Arduino Uno/Nano)
-
-\`\`\`cpp
-#include <NewPing.h>
-
-#define TRIG_PIN 9
-#define ECHO_PIN 10
-#define LED_PIN 6
-
-NewPing sonar(TRIG_PIN, ECHO_PIN, 200); // max distance 200cm
-
-void setup() {
-  pinMode(LED_PIN, OUTPUT);
-  Serial.begin(9600);
-}
-
-void loop() {
-  int distance = sonar.ping_cm();
-  Serial.println(distance);
-
-  if (distance > 0 && distance < 30) {
-    digitalWrite(LED_PIN, HIGH);
-  } else if (distance >= 30 && distance < 100) {
-    digitalWrite(LED_PIN, HIGH);
-    delay(200);
-    digitalWrite(LED_PIN, LOW);
-    delay(200);
-  } else {
-    digitalWrite(LED_PIN, LOW);
-  }
-
-  delay(50);
-}
-\`\`\`
 
 ## Components
 
