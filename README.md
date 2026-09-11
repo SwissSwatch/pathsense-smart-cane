@@ -16,7 +16,7 @@ The traditional white cane has real limitations: it only detects ground-level ob
 
 ## System Diagram
 
-![Cane component layout](diagram.png)
+![Cane component layout](diagram.svg)
 
 ## How It Works
 
