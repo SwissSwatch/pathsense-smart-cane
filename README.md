@@ -12,7 +12,7 @@ PathSense adds three layers of protection to a standard cane:
 
 ## Problem
 
-The traditional white cane has real limitations: it only detects ground-level obstacles, missing hazards at chest or head height. Worse, it cannot sense depth changes ahead — potholes, open drains, or curbs are noticed only after the user has already stepped into danger. There's also no built-in way to alert others during a fall or emergency. These gaps matter especially in regions like Kerala, where uneven roads and monsoon puddles are common daily hazards.
+The traditional white cane has real limitations: it only detects ground-level obstacles, missing hazards at chest lvl or below. Worse, it cannot sense depth changes ahead — potholes, open drains, or curbs are noticed only after the user has already stepped into danger. There's also no built-in way to alert others during a fall or emergency. These gaps matter especially in regions like Kerala, where uneven roads and monsoon puddles are common daily hazards.
 
 ## System Diagram
 
@@ -32,18 +32,19 @@ The Arduino and battery sit in a cylindrical pod, matching the cane's rod diamet
 - **Removable pod** — houses the Arduino, battery, and SOS button; matching contact pads connect power/data when twisted in
 - **Charging dock** — same thread + contact pattern as the cane base, so the pod docks directly for charging
 
-Electrical contact between the pod and either base is made using **pogo pin connectors** — spring-loaded pins that connect simply by being seated together, well suited to a twist-lock mechanism.
-
+Electrical contact between the pod and either base is made using **pogo pin connectors** — spring-loaded pins that connect simply by being seated together
 ## Components
 
 | Component | Purpose |
 |---|---|
 | Arduino Nano | Microcontroller |
 | HC-SR04 x2 | Left/right obstacle detection |
+|   Switch   | For Turning device On/Off     |
 | ToF sensor (VL53L0X) | Ground depth sensing |
 | Vibration motor | Feedback |
 | Push button + buzzer | SOS alert |
 | Pogo pin connectors | Detachable pod-to-base electrical contact |
+|  Charging Module    |  For Recharging batteries  |
 
 ## Status
 
