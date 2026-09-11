@@ -8,7 +8,7 @@ PathSense adds three layers of protection to a standard cane:
 - **Emergency SOS** — a button triggers an audible alarm for nearby help
 
 ## Team
-2-member team, Amal Jyothi College of Engineering
+4-member team, Amal Jyothi College of Engineering
 
 ## Problem
 
