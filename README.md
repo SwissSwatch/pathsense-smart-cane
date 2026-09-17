@@ -35,16 +35,57 @@ The Arduino and battery sit in a cylindrical pod, matching the cane's rod diamet
 Electrical contact between the pod and either base is made using **pogo pin connectors** — spring-loaded pins that connect simply by being seated together
 ## Components
 
-| Component | Purpose |
-|---|---|
-| Arduino Nano | Microcontroller |
-| HC-SR04 x2 | Left/right obstacle detection |
-|   Switch   | For Turning device On/Off     |
-| ToF sensor (VL53L0X) | Ground depth sensing |
-| Vibration motor | Feedback |
-| Push button + buzzer | SOS alert |
-| Pogo pin connectors | Detachable pod-to-base electrical contact |
-|  Charging Module    |  For Recharging batteries  |
+## Components
+
+**Core electronics**
+
+| Component | Spec | Qty | Purpose |
+|---|---|---|---|
+| Arduino Nano | ATmega328P | 1 | Main microcontroller |
+| HC-SR04 | Ultrasonic sensor | 2 | Left/right obstacle detection |
+| VL53L0X | ToF laser distance sensor | 1 | Ground-depth/pothole detection at tip |
+| Vibration motor | 3V coin/pancake type | 1 | Haptic feedback |
+| Push button | 6mm/12mm tactile | 1 | SOS trigger |
+| Buzzer | 5V active buzzer | 1 | SOS alarm sound |
+| On/off switch | SPDT slide or toggle | 1 | Power on/off |
+
+**Power system**
+
+| Component | Spec | Qty | Purpose |
+|---|---|---|---|
+| Li-ion battery | 18650, 3.7V | 1 | Power source |
+| TP4056 charging module | With built-in charge-status LEDs | 1 | Safe charging + charge/full indicator |
+| Battery holder | 18650 holder w/ leads | 1 | Secure battery mount |
+
+**Driving the vibration motor** (motor can't connect directly to an Arduino pin)
+
+| Component | Spec | Qty | Purpose |
+|---|---|---|---|
+| NPN transistor | 2N2222 or similar | 1 | Switch motor current safely |
+| Resistor | 1kΩ | 1 | Transistor base current limit |
+| Flyback diode | 1N4001 | 1 | Protect circuit from motor voltage spikes |
+
+**Wiring & assembly**
+
+| Component | Spec | Qty | Purpose |
+|---|---|---|---|
+| Jumper wires | M-M, M-F, F-F assorted | 1 pack | All connections |
+| Breadboard or perfboard | Mini size | 1 | Prototype/solder circuit |
+| Heat shrink tubing / electrical tape | Assorted | — | Insulate soldered joints |
+
+**Housing**
+
+| Component | Spec | Qty | Purpose |
+|---|---|---|---|
+| 3D-printed sleeve + collar | PLA, custom design | 1 set | Houses electronics, slides on/off |
+| Pogo pin connectors | 2–4 pin, spring-loaded | 1 pair | Electrical contact when sleeve seats into base |
+
+**Base structure**
+
+| Component | Spec | Qty | Purpose |
+|---|---|---|---|
+| Walking stick / cane | Rigid, adjustable | 1 | Base structure for prototype |
+
 
 ## Status
 
