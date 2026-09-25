@@ -24,16 +24,6 @@ The traditional white cane has real limitations: it only detects ground-level ob
 2. **Process** — A microcontroller checks readings against safe-distance thresholds
 3. **Alert** — Vibration feedback (or SOS alarm) tells the user what to do
 
-## Detachable Electronics Housing
-
-The Arduino and battery sit in a cylindrical pod, matching the cane's rod diameter, that twist-locks onto a permanent base mounted on the rigid shaft just below the rubber grip (so the grip itself stays untouched). The same pod twists into a charging dock using an identical thread pattern and contact layout, so one pod works for both the cane and charging.
-
-- **Permanent base** — fixed collar on the rigid shaft, wired to the shaft sensors, with a threaded rim and contact pins
-- **Removable pod** — houses the Arduino, battery, and SOS button; matching contact pads connect power/data when twisted in
-- **Charging dock** — same thread + contact pattern as the cane base, so the pod docks directly for charging
-
-Electrical contact between the pod and either base is made using **pogo pin connectors** — spring-loaded pins that connect simply by being seated together
-## Components
 
 ## Components
 
@@ -41,7 +31,7 @@ Electrical contact between the pod and either base is made using **pogo pin conn
 
 | Component | Spec | Qty | Purpose |
 |---|---|---|---|
-| Arduino Nano | ATmega328P | 1 | Main microcontroller |
+| Arduino UNO | ATmega328P | 1 | Main microcontroller |
 | HC-SR04 | Ultrasonic sensor | 2 | Left/right obstacle detection |
 | VL53L0X | ToF laser distance sensor | 1 | Ground-depth/pothole detection at tip |
 | Vibration motor | 3V coin/pancake type | 1 | Haptic feedback |
@@ -54,7 +44,6 @@ Electrical contact between the pod and either base is made using **pogo pin conn
 | Component | Spec | Qty | Purpose |
 |---|---|---|---|
 | Li-ion battery | 18650, 3.7V | 1 | Power source |
-| TP4056 charging module | With built-in charge-status LEDs | 1 | Safe charging + charge/full indicator |
 | Battery holder | 18650 holder w/ leads | 1 | Secure battery mount |
 
 **Driving the vibration motor** (motor can't connect directly to an Arduino pin)
@@ -73,20 +62,10 @@ Electrical contact between the pod and either base is made using **pogo pin conn
 | Breadboard or perfboard | Mini size | 1 | Prototype/solder circuit |
 | Heat shrink tubing / electrical tape | Assorted | — | Insulate soldered joints |
 
-**Housing**
-
-| Component | Spec | Qty | Purpose |
-|---|---|---|---|
-| 3D-printed sleeve + collar | PLA, custom design | 1 set | Houses electronics, slides on/off |
-| Pogo pin connectors | 2–4 pin, spring-loaded | 1 pair | Electrical contact when sleeve seats into base |
 
 **Base structure**
 
 | Component | Spec | Qty | Purpose |
 |---|---|---|---|
-| Walking stick / cane | Rigid, adjustable | 1 | Base structure for prototype |
+| PVC Stick to simulate Walking cane | Rigid, adjustable | 1 | Base structure for prototype |
 
-
-## Status
-
-Currently in pitch/prototype stage — circuit logic tested in [Wokwi](https://wokwi.com) simulator.
