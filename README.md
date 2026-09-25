@@ -14,10 +14,6 @@ PathSense adds three layers of protection to a standard cane:
 
 The traditional white cane has real limitations: it only detects ground-level obstacles, missing hazards at chest lvl or below. Worse, it cannot sense depth changes ahead — potholes, open drains, or curbs are noticed only after the user has already stepped into danger. There's also no built-in way to alert others during a fall or emergency. These gaps matter especially in regions like Kerala, where uneven roads and monsoon puddles are common daily hazards.
 
-## System Diagram
-
-![Cane component layout](diagram.svg)
-
 ## How It Works
 
 1. **Sense** — Ultrasonic sensors continuously scan the path ahead and below
